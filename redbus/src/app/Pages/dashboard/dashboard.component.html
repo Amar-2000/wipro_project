@@ -17,12 +17,12 @@
         <!-- Search Form -->
         <section>
             <div class="container mt-5 d-flex justify-content-center">
-                <form class="search-form d-flex align-items-center shadow-lg">
+                <form class="search-form d-flex align-items-center shadow-lg" [formGroup]="searchBusForm">
                   <div class="row w-100 text-white">
                     <div class="col-md-3 d-flex align-items-center">
                       <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-bus-front"></i></span>
-                        <input type="text" class="form-control" placeholder="From" value="Source">
+                        <input type="text" class="form-control" placeholder="From" value="Source" name="source" formControlName="source">
                       </div>
                     </div>
                     <div class="col-md-1 text-center d-flex align-items-center justify-content-center">
@@ -31,17 +31,17 @@
                     <div class="col-md-3 d-flex align-items-center">
                       <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-bus-front"></i></span>
-                        <input type="text" class="form-control" placeholder="To" value="Destination">
+                        <input type="text" class="form-control" placeholder="To" value="Destination" name="destination" formControlName="destination">
                       </div>
                     </div>
                     <div class="col-md-3 d-flex align-items-center">
                       <div class="input-group">
                         <span class="input-group-text"><i class="bi bi-calendar"></i></span>
-                        <input type="text" class="form-control" placeholder="Date" value="yyyy-mm-dd">
+                        <input type="text" class="form-control" placeholder="Date" value="yyyy-mm-dd" name="date" formControlName="date">
                       </div>
                     </div>
                     <div class="col-md-2 text-center">
-                      <button (click)="searching()" type="submit" class="btn btn-light text-danger w-100">SEARCH BUSES</button>
+                      <button (click)="searching()" type="submit" class="btn btn-light text-danger w-100" >SEARCH BUSES</button>
                     </div>
                   </div>
                 </form>
